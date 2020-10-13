@@ -1,0 +1,28 @@
+from random import randint
+n =int(input())
+l =[]
+for i in range(n):
+    ip=int(input())
+    l.append(ip)
+S=True
+u=sorted(l)
+while(S):
+    j=randint(0,n-1)
+    i=randint(0,n-1)
+    ab=l[j]
+    l[j]=l[i]
+    l[i]=ab
+    if l==u:
+      S=True
+    else:
+      S=False
+      
+    if(S):
+        break
+    else:
+        S=True
+for b in range(n):
+    if(b==n-1):
+        print(l[b],end="")
+    else:
+        print(l[b],end=" ")
